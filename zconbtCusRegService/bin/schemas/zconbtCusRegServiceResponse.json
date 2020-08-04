@@ -1,0 +1,36 @@
+{
+  "type" : "object",
+  "properties" : {
+    "CSRGRES" : {
+      "type" : "object",
+      "properties" : {
+        "CSRGRES" : {
+          "type" : "object",
+          "properties" : {
+            "CUSTOMER_NAME" : {
+              "maxLength" : 50,
+              "type" : "string"
+            },
+            "CUSTOMER_ID" : {
+              "minimum" : -999999999,
+              "maximum" : 999999999,
+              "type" : "integer"
+            },
+            "SYS_DATE" : {
+              "maxLength" : 10,
+              "type" : "string"
+            },
+            "SYS_TIME" : {
+              "maxLength" : 8,
+              "type" : "string"
+            },
+            "MESSAGES" : {
+              "maxLength" : 100,
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

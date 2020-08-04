@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="zconCusRes" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="zconCusRes">
+        <segment id="1" name="COMMAREA" originalName="COMMAREA">
+            <field name="CSRGRES" originalName="CSRGRES" included="Y" path="CSRGRES">
+                <startPos>1</startPos>
+                <bytes>177</bytes>
+                <maxBytes>177</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="CSRGRES" originalName="CSRGRES" included="Y" path="CSRGRES.CSRGRES">
+                    <startPos>1</startPos>
+                    <bytes>177</bytes>
+                    <maxBytes>177</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CUSTOMER_NAME" originalName="CUSTOMER_NAME" included="Y" path="CSRGRES.CSRGRES.CUSTOMER_NAME">
+                        <startPos>1</startPos>
+                        <bytes>50</bytes>
+                        <maxBytes>50</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CUSTOMER_ID" originalName="CUSTOMER_ID" included="Y" path="CSRGRES.CSRGRES.CUSTOMER_ID">
+                        <startPos>51</startPos>
+                        <bytes>9</bytes>
+                        <maxBytes>9</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                    </field>
+                    <field name="SYS_DATE" originalName="SYS_DATE" included="Y" path="CSRGRES.CSRGRES.SYS_DATE">
+                        <startPos>60</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="SYS_TIME" originalName="SYS_TIME" included="Y" path="CSRGRES.CSRGRES.SYS_TIME">
+                        <startPos>70</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="MESSAGES" originalName="MESSAGES" included="Y" path="CSRGRES.CSRGRES.MESSAGES">
+                        <startPos>78</startPos>
+                        <bytes>100</bytes>
+                        <maxBytes>100</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

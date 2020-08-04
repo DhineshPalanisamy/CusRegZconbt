@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="zconCusRegReq" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="zconCusRegReq">
+        <segment id="1" name="COMMAREA" originalName="COMMAREA">
+            <field name="CSRGREQ" originalName="CSRGREQ" included="Y" path="CSRGREQ">
+                <startPos>1</startPos>
+                <bytes>18</bytes>
+                <maxBytes>18</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="CSRGREQ" originalName="CSRGREQ" included="Y" path="CSRGREQ.CSRGREQ">
+                    <startPos>1</startPos>
+                    <bytes>18</bytes>
+                    <maxBytes>18</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="ACCOUNT_NO" originalName="ACCOUNT_NO" included="Y" path="CSRGREQ.CSRGREQ.ACCOUNT_NO">
+                        <startPos>1</startPos>
+                        <bytes>18</bytes>
+                        <maxBytes>18</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="18" scale="0"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>
